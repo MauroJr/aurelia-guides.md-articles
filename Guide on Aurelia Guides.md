@@ -1,20 +1,22 @@
-*So, it seems that this page is a metadata page.* :-)
+## Introduction
 
-* * *
+The purpose of the Aurelia-Guides project is to collect and organize all Aurelia related information **that is not included** in the [Aurelia official documentation](http://aurelia.io/docs.html).Since this is a dynamic definition, the following few paragraphs try to refine it, with the goal to collect as valuable information as possible, with the least amount of redundancy, overlaps with official documentation and maximum accessibility. This last attribute _maximum accessibility_ is the area where we expect to offer some **innovation**.
 
-### Introduction
+Initially Aurelia-Guides content belongs to two distinct categories:
 
-Aurelia-Guides content belongs to two distinct categories:
+#### 1.Large portions of text
 
-1.  Large portions of text written in form of a blog or a tutorial. The **Authoring blogs / tutorials** section that follows below provides the details how to do that.
+ written in form of a blog or a tutorial.  This is the primary method for adding value to Aurelia-Guides repository and includes everything of interest on how to build an Aurelia application or Aurelia Plugin, using different development tools, different back-ends, various databases, interfacing third party API, etc..(_This definition is expected to be expanded as we develop this project_). The **[Authoring blogs / tutorials](#auth_blogs)** section that follows below provides the details how to do that.
 
-2.  Code snippets acquired by people answering questions in Gitter hosted **[Aurelia/Discuss][1]** chat room.
+#### 1.Code snippets
+acquired by people answering questions in Gitter hosted **[Aurelia/Discuss][1]** chat room. The **[Adding snippets](#auth_snippets)** section that follows below provides the details how to do that
 
-Each of these categories has specific workflow assigned, which describes the process of contributing new data.
 
-* * *
+Each of these two categories has specific workflow assigned, which describes the process of contributing data from that category.
 
-### Authoring blogs / tutorials
+<!––nextpage––> 
+
+## <a name="auth_blogs"></a>Authoring blogs / tutorials
 
 This workflow is slightly more than trivial (say different from filling a form on this site), since the articles for Aurelia-Guides site **are maintained** in Github repository <https://github.com/aurelia-guides/aurelia-guides.md-articles> subsequently referred to as `Aurelia-Guides sources` and they **are rendered** at <http://blog.aurelia-guides.com> site. This separation of maintenance and rendering environments might be only temporary and is currently in place because of perceived difficulties related to use of **[Jekyll and Github-pages][2]**
 
@@ -22,17 +24,15 @@ The beginning of your request for contribution is well known to any Github user:
 
 **Step 1** Clone the repository
 
-**Step 2** Add your own article (probably starting with the article summary like [this one][3]):
+**Step 2** Add your own article (probably starting with the article summary like **[this one][3]**:
  
 
-Testing is an integral part of any modern web application. A write-up on testing every aspect of Aurelia from A-Z would undeniably be super helpful for newcomers as well as helping expose users of Aurelia to various aspects (not limited to unit testing).
+>Testing is an integral part of any modern web application. A write-up on testing every aspect of Aurelia from A-Z would undeniably be super helpful for newcomers as well as helping expose users of Aurelia to various aspects (not limited to unit testing).
 
-A nicely broken up post on testing from ViewModels, to Custom Elements and Attributes. The various features like Behavior Instances, Containers and using methods like registerInstance, etc.
+>A nicely broken up post on testing from ViewModels, to Custom Elements and Attributes. The various features like Behavior Instances, Containers and using methods like registerInstance, etc.
 
-    **Dwayne Charrington** (Vheissu) is authoring this post.
+>**Dwayne Charrington** (Vheissu) is authoring this post.
 
-
- 
 
 **Step 3** Create the **[PR][4]** which will be processed by the site owner (@adriatic and @delebash initially)
 
@@ -46,12 +46,14 @@ At this early stage, given the number of very motivated early adopters compared 
 
 Any question - please create an issue **[here][6]**
 
-### Adding code snippets
+<!––nextpage––> 
+
+## <a name="auth_snippets"></a>Adding code snippets
 
 
-You will be adding code snippets to Aurelia Guides using the Snippet Manager plugin called ScribeFire
+You will be adding code snippets to Aurelia Guides using the ScribeFire Snippet Manager plugin.
 
-First credit goes to the great folks at [SribeFire][9] who made the plugin!
+First credit goes to the great folks at [ScribeFire][9] who made the plugin!
 
 To use ScribeFire, just click on the appropriate links to install the extension for you browser.
 
@@ -61,17 +63,16 @@ To use ScribeFire, just click on the appropriate links to install the extension 
 
 *Note:* At this time it does not work in Firefox and I do not have a mac to test on [Safari][10] but if anyone wants to test on [Safari][10] and give us feedback that would be great.
 
-### Setup and Usage instructions for the Snippet Manager called ScribeFire.
+### Setup and Usage instructions for the ScribeFire Snippet Manager.
 
-This is for the Chrome extension but should be the same for Opera and Safari if the Sarfari extension works.
+_**Note:**  This is for the Chrome extension but should be the same for Opera and Safari if the Safari extension works._
 
 **Step 1** Install plugin for [Chrome][7]
 
-**Step 2** ScribeFire(Snippet Manager) will be added to Chromes Extension bar in the upper right corner 
-
+**Step 2** ScribeFire(Snippet Manager) will be added to Chrome's Extension bar in the upper right corner 
 [<img src="http://blog.aurelia-guides.com/wp-content/uploads/2015/08/2015-08-29_00-45-38.png" alt="2015-08-29_00-45-38" width="40" height="31" class="alignnone size-full wp-image-283" />][11]
 
-**Step 3** Click on the ScribeFire button to launch. Close the Welcome window, you will only see this once. 
+**Step 3** Click on the ScribeFire button to launch. Close the Welcome window, (you will only see it only  once). 
 
 [<img src="http://blog.aurelia-guides.com/wp-content/uploads/2015/08/2015-08-29_01-30-27-300x142.png" alt="2015-08-29_01-30-27" width="300" height="142" class="alignnone size-medium wp-image-290" />][12]
 
