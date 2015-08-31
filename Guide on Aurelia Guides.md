@@ -8,13 +8,13 @@ Initially Aurelia-Guides content belongs to two distinct categories:
 
  written in form of a blog or a tutorial.  This is the primary method for adding value to Aurelia-Guides repository and includes everything of interest on how to build an Aurelia application or Aurelia Plugin, using different development tools, different back-ends, various databases, interfacing third party API, etc..(_This definition is expected to be expanded as we develop this project_). The **[Authoring blogs / tutorials](#auth_blogs)** section that follows below provides the details how to do that.
 
-#### 1.Code snippets
+#### 2.Code snippets
 acquired by people answering questions in Gitter hosted **[Aurelia/Discuss][1]** chat room. The **[Adding snippets](#auth_snippets)** section that follows below provides the details how to do that
 
 
 Each of these two categories has specific workflow assigned, which describes the process of contributing data from that category.
 
-<!––nextpage––> 
+----
 
 ## <a name="auth_blogs"></a>Authoring blogs / tutorials
 
@@ -46,7 +46,7 @@ At this early stage, given the number of very motivated early adopters compared 
 
 Any question - please create an issue **[here][6]**
 
-<!––nextpage––> 
+----
 
 ## <a name="auth_snippets"></a>Adding code snippets
 
