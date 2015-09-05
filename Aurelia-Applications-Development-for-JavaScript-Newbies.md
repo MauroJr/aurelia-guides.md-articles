@@ -75,6 +75,14 @@ where the Care Manager's view is
 ![](http://i.imgur.com/cOTbnqX.png)
 
 ----
+----
+
+## What was the middle one?
+
+This title is the famous quote from **[Fish called Wanda](http://www.imdb.com/title/tt0095159/quotes)** one of my favorite movies of all time (it shows that I am a big fan of [Monty Python](https://en.wikipedia.org/wiki/Monty_Python). In our context here it hints that this segment should enumerate the all the steps that will be injected between the **[first](http://blog.aurelia-guides.com/2015/08/22/smallest-aurelia-application-created-from-scratch/)** and last introduced above).
+
+----
+----
 
 #Summary
 
