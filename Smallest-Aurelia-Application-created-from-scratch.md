@@ -102,8 +102,16 @@ By default, Aurelia Boostrap loader (``aurelia-bootstrapper``) expects the view 
 **app.js**
 
     export class App {
-      message = 'hello world';
-    }
+
+		constructor() {
+			this.message = "";
+		}
+
+		activate() {
+			this.message = 'hello world';
+		}	
+		  
+	}
 
 **app.html**
 
