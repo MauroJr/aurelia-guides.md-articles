@@ -13,7 +13,8 @@ Comments have been added to explain the code
 <template>
     <!-- Create a ul element for the clickable tabs -->
     <ul class="nav nav-tabs">
-        <!--  Repeat over each `tab` in the `tabs` collection - note that the class is also programatically chosen based on if the current tab === the selected tab --> 
+        <!--  Repeat over each `tab` in the `tabs` collection - note that the class is also 
+        programatically chosen based on if the current tab === the selected tab --> 
         <li role="presentation" click.delegate="$parent.selectTab(tab)" repeat.for="tab of tabs" class="${ $parent.selectedTab === tab ? 'active' : '' }"><a href="#">${ tab.heading }</a></li>
     </ul>
     
@@ -28,7 +29,12 @@ Comments have been added to explain the code
 ```Javascript
 import {sync, bindable} from 'aurelia-framework';
 
-// The sync decorator uses a DOM mutation observer to look for changes in the DOM. When changes occur, it runs the specified CSS selector and picks up the matched elements. An array property is added to your viewmodel class with the specified name. The array will contain the elements themselves or if they are backed by viewmodels will contain the viewmodel instances 
+// The sync decorator uses a DOM mutation observer to look for changes
+// in the DOM. When changes occur, it runs the specified CSS selector 
+// and picks up the matched elements. An array property is added to your
+// viewmodel class with the specified name. The array will contain the
+// elements themselves or if they are backed by viewmodels will contain
+// the viewmodel instances 
 @sync({ name: "tabs", selector: "tab" })
 export class TabSet {
     // This will be a collection of tabs that are children of the custom element tag
