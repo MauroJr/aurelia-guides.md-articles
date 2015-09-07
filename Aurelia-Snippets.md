@@ -25,7 +25,7 @@ Comments have been added to explain the code
 </template>
 ```
 
-**tab-set.ts**
+**tab-set.js**
 ```Javascript
 import {sync, bindable} from 'aurelia-framework';
 
