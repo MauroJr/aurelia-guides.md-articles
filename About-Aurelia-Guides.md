@@ -16,7 +16,8 @@ Everything of interest on how to build an Aurelia application or Aurelia Plugin,
 
 ##### Code/Data Snippets
 
-Any code snippet that can help others while building or testing apps / plugins. Note that most of such snippets appear (and get subsequently lost) in [Aurelia/Discuss chat room](https://gitter.im/Aurelia/Discuss). The term **Code Snippet** is indeed too narrow as, this category should include all information (like a reference to some resource of interest, brief &quot;how-to&quot; instructions) that the consumer of this information wants to make available for others at a later time.
+Any code snippet that can help others while building or testing apps / plugins. Note that most of such snippets appear (and get subsequently lost) in [Aurelia/Discuss chat room](https://gitter.im/Aurelia/Discuss). The term **Code Snippet** is indeed too narrow as, this category should include all information (like a reference to some resource of interest, brief &quot;how-to&quot; instructions) that the consumer of this information wants to make available for others at a later time. The best way to understand the value of the code snippets in the context of Aurelia-Guides,  is to realize that code snippets are generated in a situations when the existing documentation is unclear or insufficient - or both.
+
 
 * * *
 
@@ -26,15 +27,17 @@ Any code snippet that can help others while building or testing apps / plugins. 
 
 In order to ensure that **Blog posts** are of interest to many, and cover all areas of interest, without too much overlap, I propose the following process for each author of the post:
 
-*   Create the entry in the [issues section](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues) and give it the name of the article that you want to write and prepend the name with `Blog post proposal:` (this prepended string will later help filtering blog post proposals from other issues that are maintained in the same Github list). Use the Comments section of this issue to explain more details about the post you want to write
+*   Create the entry in the **[issues section](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues)** and give it the name of the article that you want to write and prepend the name with `Blog post proposal:` (this prepended string will later help filtering blog post proposals from other issues that are maintained in the same Github list). Use the Comments section of this issue to explain more details about the post you want to write
 *   Someone from the set of editors (humans, not a piece of software) will regularly scan this issues section and ensure that the proposal is &quot;in line&quot; with the expectations we have about the content of this site and state his / her approval in that Comments Section.
 *   All (approved) blog proposal issues will appear on the [Zenhub board](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues#boards?repos=40382874) where the author can use the available &quot;agile&quot; tools to coordinate the subsequent life of this blog post.*   When you are finished with the first draft of your article, please remove the string `Blog post proposal:`, and update the status of your work at [Zenhub board](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues#boards?repos=40382874).
 
-**Note**: this process may appear over-designed for the creation of 4 blog posts by two authors; I expect this not to be the case and we might have thousands of posts by hundreds of authors - and then such workflow may even appear to unconstrained. However, we can always strengthen it as we have all tools available that are used in a more difficult environment (software development management)
+**Note**: this process may appear over-designed for the creation of 4 blog posts by two authors; I expect this not to be the case and we might have thousands of posts by hundreds of authors - and then such workflow may even appear to unconstrained. However, we can always strengthen it as we have all tools available that are used in a more difficult environment (software development management). Until we reach first thousand articles however, please feel free to simply add your own article in **[https://github.com/aurelia-guides/aurelia-guides.md-articles](https://github.com/aurelia-guides/aurelia-guides.md-articles)** collection once you verify that that a similar article doe not yet exist.
 
 ##### Code / Data Snippets
 
 As mentioned before this is a more involved process that requires more instant work from the &quot;benefactors&quot; of discussions in [Aurelia/Discuss](https://gitter.im/Aurelia/Discuss) chat room. I would like to create some relatively simple Aurelia application - [Snippet Manager](https://github.com/aurelia-guides/aurelia-guides.github.io/issues/4) that can be used as the intermediary (copy from Aurelia/Discuss chat room and paste into Snippet Manager) **in the context of using** Aurelia/Discuss chat room. Snippet Manager (which will likely have to be a Github app) will then persist these snippets together with the metadata created in the copy / paste action.
+
+Until such utility application becomes available - please create your own snippet as an issue **[here](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues)** using **[this snippet](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues/20)** as a template
 
 Clearly, we need to offer an innovative process for searching and rendering such huge collection of data, starting with the automatic creation of the before mentioned metadata (to insure proper categorization and search attributes).
 
