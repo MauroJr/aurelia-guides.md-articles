@@ -1,7 +1,9 @@
 # Introduction
 
 This document has two sections:
+
 **1.** Instructions for [authoring whole articles](#auth_blogs). This is the primary model for adding information to Aurelia-Guides and primary reason for Aurelia-Guides existence. 
+
 **2.** Instructions for [authoring code snippets](#auth_snippets) - where code snippets are defined as a consistent set of code and related tags, illustrating some specific programming detail, just like [github gists](https://developer.github.com/v3/gists/) - format that would like to add as soon as possible. In the meantime Aurelia-Guides offers several less sophisticated means to add a snippet - see more in [Adding code snippet](#auth_snippets) section below.
 
 ----
