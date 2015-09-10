@@ -4,6 +4,8 @@ This document has two sections:
 **1.** Instructions for [authoring whole articles](#auth_blogs). This is the primary model for adding information to Aurelia-Guides and primary reason for Aurelia-Guides existence. 
 **2.** Instructions for [authoring code snippets](#auth_snippets) - where code snippets are defined as a consistent set of code and related tags, illustrating some specific programming detail, just like [github gists](https://developer.github.com/v3/gists/) - format that would like to add as soon as possible. In the meantime Aurelia-Guides offers several less sophisticated means to add a snippet - see more in [Adding code snippet](#auth_snippets) section below.
 
+----
+
 ## <a name="auth_blogs"></a>Authoring blogs / tutorials
 
 This workflow is slightly more than trivial (say different from filling a form on this site), since the articles for Aurelia-Guides site **are maintained** in Github repository <https://github.com/aurelia-guides/aurelia-guides.md-articles> subsequently referred to as `Aurelia-Guides sources` and they **are rendered** at <http://blog.aurelia-guides.com> site. This separation of maintenance and rendering environments might be only temporary and is currently in place because of perceived difficulties related to use of **[Jekyll and Github-pages][2]**
@@ -40,10 +42,11 @@ Any question - please create an issue **[here][6]**
 
 At the moment, we offer two ways to add a code snippet 
 
-#### Method A using [Github Issues list](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues) 
+#### Method A using [SnippetsDump.md file](https://github.com/aurelia-guides/aurelia-guides.md-articles/blob/master/SnippetsDump.md) 
 
-Until we further evolve that Snippet Manager (described below as Method B), using [Github Issues list](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues) is the recommended way to add a snippet. See [this](https://help.github.com/articles/creating-an-issue/) or [this](https://guides.github.com/features/issues/) for more information and keep in mind that you are trying to create a snippet - not to report a problem :-)
+Until we further evolve that Snippet Manager (described below as Method B), using [SnippetsDump.md file](https://github.com/aurelia-guides/aurelia-guides.md-articles/blob/master/SnippetsDump.md is the recommended way to add a snippet. Simply add to this file (using proper Github Markdown Dialect of course)
 
+**This file will be regularly processed by Aurelia-Guides folks and place the info on the right place.**
 
 #### Method B - using ScribeFire Snippet Manager Plugin
 You will be adding code snippets to Aurelia Guides using the ScribeFire Snippet Manager plugin.
