@@ -5,12 +5,12 @@ There is a very important difference between the official Aurelia documentation 
 
 This document - **Guide on Aurelia-Guides** addresses two different  categories of subscribers, each interacting with two categories of content. Each of these two categories has specific workflow assigned, which describes the process of contributing data from that category. The four links below, will get you to the relevant pages with details of the creating or consuming that content.
 
-###A Readers category 
+### A Readers category 
 - **[Tutorials / Blogs](blog.aurelia-guides.com/Readers-Guide#read_blogs)**: Guides on how to find the articles of interest using Aurelia-Guides advanced search interface
 
 - **[Code Snippets](blog.aurelia-guides.com/Readers-Guide#use_snippets)**: Information about types of code snippets and use case based search for the snippet you need.
 
-###B Writers category
+### B Writers category
 
 - **[Tutorials / Blogs](http://blog.aurelia-guides.com/writers-Guide#auth_blogs)**: Creating information in this format is the primary method for adding value to Aurelia-Guides repository and includes everything of interest on how to build an Aurelia application or Aurelia Plugin, using different development tools, different back-ends, various databases, interfacing third party API, etc..(_This definition is expected to be expanded as we develop this project_). 
 

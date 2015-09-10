@@ -33,6 +33,8 @@ In order to ensure that **Blog posts** are of interest to many, and cover all ar
 
 **Note**: this process may appear over-designed for the creation of 4 blog posts by two authors; I expect this not to be the case and we might have thousands of posts by hundreds of authors - and then such workflow may even appear to unconstrained. However, we can always strengthen it as we have all tools available that are used in a more difficult environment (software development management). Until we reach first thousand articles however, please feel free to simply add your own article in **[https://github.com/aurelia-guides/aurelia-guides.md-articles](https://github.com/aurelia-guides/aurelia-guides.md-articles)** collection once you verify that that a similar article doe not yet exist.
 
+**Note:** see [this](http://blog.aurelia-guides.com/2015/08/21/how-to-contribute-to-aurelia-guides/) for details of adding a new article
+
 ##### Code / Data Snippets
 
 As mentioned before this is a more involved process that requires more instant work from the &quot;benefactors&quot; of discussions in [Aurelia/Discuss](https://gitter.im/Aurelia/Discuss) chat room. I would like to create some relatively simple Aurelia application - [Snippet Manager](https://github.com/aurelia-guides/aurelia-guides.github.io/issues/4) that can be used as the intermediary (copy from Aurelia/Discuss chat room and paste into Snippet Manager) **in the context of using** Aurelia/Discuss chat room. Snippet Manager (which will likely have to be a Github app) will then persist these snippets together with the metadata created in the copy / paste action.

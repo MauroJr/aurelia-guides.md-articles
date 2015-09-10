@@ -1,7 +1,8 @@
-#Introduction
+# Introduction
 
-Morbi imperdiet pharetra turpis, id semper augue placerat eu. Sed mattis maximus eros, nec commodo sem fringilla sit amet. Ut placerat libero et tempus rhoncus. Donec vel elit vestibulum, tincidunt felis quis, viverra dui. Donec nulla mi, laoreet vitae nulla et, maximus feugiat nulla. Morbi molestie elementum faucibus. Praesent in aliquet augue, efficitur malesuada orci. Proin placerat scelerisque est, sed interdum nisi vestibulum ut. Mauris sit amet neque tincidunt, congue augue a, auctor enim. Aliquam condimentum sit amet purus a pellentesque. Sed a laoreet mauris. Integer accumsan, ante et aliquet facilisis, nulla mauris suscipit lacus, vitae placerat sem felis quis odio. Sed tincidunt, magna vitae tincidunt ornare, risus ligula accumsan libero, et vulputate nulla sapien sed est. Cras lobortis lacus in risus fringilla consequat. Praesent pretium diam ut arcu ultricies, id porta dui sagittis. Suspendisse porttitor justo lacus, non ultricies tellus volutpat id.
-
+This document has two sections:
+**1.** Instructions for [authoring whole articles](#auth_blogs). This is the primary model for adding information to Aurelia-Guides and primary reason for Aurelia-Guides existence. 
+**2.** Instructions for [authoring code snippets](#auth_snippets) - where code snippets are defined as a consistent set of code and related tags, illustrating some specific programming detail, just like [github gists](https://developer.github.com/v3/gists/) - format that would like to add as soon as possible. In the meantime Aurelia-Guides offers several less sophisticated means to add a snippet - see more in [Adding code snippet](#auth_snippets) section below.
 
 ## <a name="auth_blogs"></a>Authoring blogs / tutorials
 
@@ -37,7 +38,14 @@ Any question - please create an issue **[here][6]**
 
 ## <a name="auth_snippets"></a>Adding code snippets
 
+At the moment, we offer two ways to add a code snippet 
 
+#### Method A using [Github Issues list](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues) 
+
+Until we further evolve that Snippet Manager (described below as Method B), using [Github Issues list](https://github.com/aurelia-guides/aurelia-guides.md-articles/issues) is the recommended way to add a snippet. See [this](https://help.github.com/articles/creating-an-issue/) or [this](https://guides.github.com/features/issues/) for more information and keep in mind that you are trying to create a snippet - not to report a problem :-)
+
+
+#### Method B - using ScribeFire Snippet Manager Plugin
 You will be adding code snippets to Aurelia Guides using the ScribeFire Snippet Manager plugin.
 
 First credit goes to the great folks at [ScribeFire][9] who made the plugin!
@@ -48,7 +56,7 @@ To use ScribeFire, just click on the appropriate links to install the extension 
 
 [Opera][8]
 
-*Note:* At this time it does not work in Firefox and I do not have a mac to test on [Safari][10] but if anyone wants to test on [Safari][10] and give us feedback that would be great.
+*Note:* At this time it does not work in Firefox and we have not yet tested in on [Safari][10], If anyone wants to test on [Safari][10] and give us feedback that would be great.
 
 ### Setup and Usage instructions for the ScribeFire Snippet Manager.
 
@@ -97,27 +105,27 @@ When you click Publish after success you will be presented with a dialog box all
 
 ScribeFire remembers it's last state, so if you created a new post and published that post then closed ScribeFire, when you open it up again you will be on your last post in Edit mode verse Add New. There are two ways to get into Add New Post.
 
-### To Add New/Edit exising Post
+### To Add New/Edit existing Post
 
-To Add:
+**To Add:**
 
-1.  When you Publish a post and are presented with the dialog box for a successful publish just click on Start a New Post then close ScribeFire, as it remebers it's last state, when you open it up again you will be in Add New post mode.
+- When you Publish a post and are presented with the dialog box for a successful publish just click on Start a New Post then close ScribeFire, as it remebers it's last state, when you open it up again you will be in Add New post mode.
 
-2.  On the left side under Post you can start a new Post by clicking on the link that says Start a New Post.
-
-[<img src="http://blog.aurelia-guides.com/wp-content/uploads/2015/08/2015-08-29_02-19-50-300x102.png" alt="2015-08-29_02-19-50" width="300" height="102" class="alignnone size-medium wp-image-300" />][18]
-
-To Edit:
-
-1.  Under Post on the left side choose the post you want to edit from the dropdown box. If you choose to edit a post the information will be loaded into the Title and Content fields. Please do not post inapporpriate things, since everyone is under the same username you can edit any published post, but please be curtious and only edit someone's post if you need to correct it or add relevant information. It would be nice if you where to leave your name that you edited this post and why.
+- On the left side under Post you can start a new Post by clicking on the link that says Start a New Post.
 
 [<img src="http://blog.aurelia-guides.com/wp-content/uploads/2015/08/2015-08-29_02-19-50-300x102.png" alt="2015-08-29_02-19-50" width="300" height="102" class="alignnone size-medium wp-image-300" />][18]
 
-1.  Also on the left side are Catagories and Tags, please choose at least on option either a category, a tag or both. For now you may add new Categories and Tags.
+**To Edit:**
+
+- Under Post on the left side choose the post you want to edit from the dropdown box. If you choose to edit a post the information will be loaded into the Title and Content fields. Please do not post inapporpriate things, since everyone is under the same username you can edit any published post, but please be curtious and only edit someone's post if you need to correct it or add relevant information. It would be nice if you where to leave your name that you edited this post and why.
+
+[<img src="http://blog.aurelia-guides.com/wp-content/uploads/2015/08/2015-08-29_02-19-50-300x102.png" alt="2015-08-29_02-19-50" width="300" height="102" class="alignnone size-medium wp-image-300" />][18]
+
+- Also on the left side are Catagories and Tags, please choose at least on option either a category, a tag or both. For now you may add new Categories and Tags.
 
 [<img src="http://blog.aurelia-guides.com/wp-content/uploads/2015/08/2015-08-29_02-38-53-300x124.png" alt="2015-08-29_02-38-53" width="300" height="124" class="alignnone size-medium wp-image-301" />][19]
 
-To close ScribeFire just close it's browser tab.
+**To close ScribeFire just close it's browser tab.**
 
 Full picture of ScribeFire for your reference.
 
@@ -133,16 +141,16 @@ You can either copy the text you want, open ScribeFire and paste it into the con
 
 Currently we do not support the Github Flavored Markdown but just the regular Markdown no triple back ticks for code blocks :(. Instead for code blocks you must wrap your code in `<pre></pre>` tags like so.
 
-`<pre>
+```
 function helloWorld(){
-console.log('Hello World')
+    console.log('Hello World')
 }
-</pre>`
+```
 
 Which will actually look like
 
 <pre>function helloWorld(){
-console.log('Hello World')
+    console.log('Hello World')
 }
 </pre>
 
