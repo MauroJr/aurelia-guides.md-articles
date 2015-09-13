@@ -10,6 +10,11 @@ I consider this just as an experiment, because I would really like to offer some
 
 - **[The Two Pillars of JavaScript - Part 1: How to Escape the 7th Circle of Hell](https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3) by [Eric Elliot](https://medium.com/@_ericelliott)**
 
+
+#### HTML5
+
+**[Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/#toc-separation)**
+
 ### Styling
 
 - **[Saving the Day with Scoped CSS](https://css-tricks.com/saving-the-day-with-scoped-css/)**
