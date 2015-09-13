@@ -13,7 +13,7 @@ I consider this just as an experiment, because I would really like to offer some
 
 #### HTML5
 
-**[Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/#toc-separation)**
+- **[Shadow DOM 101](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/#toc-separation)**
 
 ### Styling
 
