@@ -12,11 +12,20 @@ Let's build the following structure to be used in all subsequent samples, by add
 
 Unlike the [Aurelia Skeleton Navigation application](https://github.com/aurelia/skeleton-navigation) which is mostly focused on development and testing of the Aurelia component of the full stack application, we are starting with the whole thing from the very beginning
 
-Let's create the "outer container"  first - using **AG_Aurelia_Application_Skeleton** as the project name. In this whole tutorial we will use ME**A**N environment, where **A** stands for Aurelia of course and the tools very simple
+Let's create the "outer container"  first - using **AG_Aurelia_Application_Skeleton** as the project name. In this whole tutorial we will use ME**A**N environment, where **A** stands for Aurelia of course.
+
+#### Tools we will use
 
 - [Sublime 3](http://www.sublimetext.com/3) text editor
 -  [Cmder](http://cmder.net/) console
 - [Chrome](https://www.google.com/intl/en/chrome/browser/desktop/index.html#brand=CHMB&utm_campaign=en&utm_source=en-ha-na-us-sk&utm_medium=ha) browser
+- [WebStorm](https://www.jetbrains.com/webstorm/) in all cases that require the server side debugging
+
+**Note** See [Aurelia Development Environment and Tools](http://blog.aurelia-guides.com/2015/08/22/aurelia-development-environment-and-tools/#comment-33) and [What you need to know before writing your first Aurelia application](http://blog.aurelia-guides.com/2015/08/17/what-you-need-to-know-before-writing-your-first-aurelia-application/) for a lot more information 
+
+#### Step 1
+
+
 
 
 
