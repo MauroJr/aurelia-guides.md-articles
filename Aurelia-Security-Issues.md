@@ -24,6 +24,9 @@ A highly-available API built in an advanced cloud, Stormpath can be deployed pri
 
 ![](http://i.imgur.com/1GncCLY.png)
 
+
+----------
+
 ### A few more details
 - Stormpath supports creation and storage of any number of user accounts. Assign your users to groups or associate entire user stores with one or many applications.
 
@@ -48,15 +51,44 @@ A highly-available API built in an advanced cloud, Stormpath can be deployed pri
 - Highly available, clustered data store with double or triple redundancy
 - Low latency, multi-zone infrastructure on Amazon Web Services
 
+
+----------
+
 ### One very important detail, now
 
 Most of the time Aurelia (front end) applications are perceived as a SPA-type applications (also called "untrusted clients" because people can easily alter or inject javascript code on a page through the developer console, so we do not want to embed sensitive information like secret keys or passwords in these types of clients. This "fear" leads to the concept of **"token based authentication"** - quite eloquently **[described here](http://docs.stormpath.com/guides/token-management/)**.
 
 This very important detail mentioned in the header of this section is that Stormpath **[fully supports token based authentication](http://docs.stormpath.com/guides/token-management/#how-to-use-stormpath-for-token-based-authentication)** - meaning that a part of the service is the Security Token Server aka **[STS](https://msdn.microsoft.com/en-us/library/ee804740.aspx)** 
 
+------
+
+## Aurelia Stormpath Integration
+
+Only a few words about the meaning of "integration" in this context - a lot more will be added once we had a chance to discuss this **[here](https://github.com/aurelia-guides/aurelia-stormpath-sdk/issues)**.
+
+By using Aurelia-Stormpath SDK (properly integrated with **Aurelia-Auth plugin**) Aurelia application developers will have several important benefits:
+
+**1** Complete set of prebuilt User Interface elements - like
 
 
+ ![](http://i.imgur.com/KLRjwtf.png)  
 
+![](http://i.imgur.com/PnlXD6f.png)
 
+There many more UI elements covering the whole account management workflow
 
+**2** Rich set of Aurelia Custom elements: 
+- ``ifNotUser``
+- ``ifUser``
+- ``ifUserInGroup``
+- ``ifUserStateKnown``
+- ``ifUserStateUnknown``
+- ``emailVerification``
+- ``loginForm``
+- ``logout``
+- ``passwordResetForm``
+- ``passwordResetRequestForm``
+- ``registrationForm``
+- ``while-resolving-user``
 
+**Note**: all predefined user interface elements are fully extensible - and in all reality, this is just the beginning, our own imagination is the limit
