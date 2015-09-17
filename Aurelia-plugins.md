@@ -112,6 +112,21 @@ export function configure(aurelia) {
   
   aurelia.start().then(a => a.setRoot());
 }
-
 ```
+
+----------
+
+----------
+
+### Working notes (@jdanyov)
+
+unfortunately an end-to-end tutorial does not exist to my knowledge. I have an idea for you if you want to push ahead and write this guide without a tutorial written by someone else: what you could do is take a look at the index.js files in each of the plugins I mentioned along with the instructions for usage in each of the libraries readme.md files. By pooling those examples and instructions you could probably create some pretty compelling original content for aurelia guides.
+
+Aurelia is very very extensible so a plugin could do anything. Here's some examples:
+- Plugins that provide general functionality like aurelia-dialog, aurelia-i18n, etc
+- Some plugins provide resources like custom elements, custom attributes, value converters. In that case it's a matter of calling globalResources(...) in the plugin code.
+- Other plugins register adapters to teach aurelia's binding system how to observe certain types of objects. Examples of this would be (aurelia-computed and aurelia-breeze).
+- Then there are plugins that register custom implementations of standard aurelia components or monkey-patch standard aurelia components. Examples of this would be any of the animation plugins, also aurelia-async.
+- A plugin could be any combination of the above. Does that help you?
+
 

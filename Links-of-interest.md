@@ -2,6 +2,9 @@
 
 I consider this just as an experiment, because I would really like to offer something more intelligent that a page with links. That something smarter will take time to do and I want to save some links of value.
 
+### ES5
+- **[Introduction to AMD Modules](https://dojotoolkit.org/documentation/tutorials/1.10/modules/)**
+
 ### ES6
 
 - **[Learn ES2015 -- A detailed overview of ECMAScript 6 features.](http://babeljs.io/docs/learn-es2015/)**
