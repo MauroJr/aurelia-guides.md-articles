@@ -18,12 +18,13 @@ So, Aurelia-Guides presents the process of building this application gradually f
 
 ## Structure of the Aurelia Skeleton Navigation application
 
-We are building the application which  will have this **final** structure (this is the version 0.18.1 being current at the time of writing this tutorial
+We are building the application which  will at the end have this **final** structure (shown is the version 0.18.1 being current at the time of writing this tutoria)l
 
 ![](http://i.imgur.com/Xn1J8jh.png)
 
+-----
 
-Let's start with the smallest meaningful subset of this hierarchy:
+#### Let's start with the **smallest** meaningful subset of the application skeleton by following next 5 steps
 
 ### Step 1 
 **Create the ``src`` folder and add the 4 minimally required files**
@@ -322,6 +323,101 @@ Running this (``gulp serve``) command results with
 When setting the url to ``http://localhost:9000`` we get the expected view:
 
 ![](http://i.imgur.com/pHOZBus.png)
+
+-----
+
+### Adding Navigation (menu bar)
+
+The application we developed so far is nearly complete - it still misses the complete testing infrastructure, that will be addressed in a different article. Aside from that, adding more functionality to the application is relatively very easy, as all we need to do is to add more view / view model pairs and add them to the ``src`` folder which at this point has just three files:
+
+![](http://i.imgur.com/Xz91mHF.png)
+
+While in the general case we will make the content of the ``src`` folder a nested structure to separate files by functionality (or some other preferred way), we can add the basic support for navigation quite simply - since we already added Boostrap and Fonts Awesome files in the **Step 2** above (check the content of the  ``package.json`` file).
+
+Here are the updated versions of the the original  four files, needed to implement navigation.:
+
+**app.html**
+```html
+<template>
+  <require from="nav-bar.html"></require>
+  <require from="bootstrap/css/bootstrap.css"></require>
+
+  <nav-bar router.bind="router"></nav-bar>
+
+  <div class="page-host">
+    <router-view></router-view>
+  </div>
+</template>
+```
+**app.js**
+
+Instead of the trivial initial version of the app.js, where we simply defined the "hello world " string to be printed as the only functionality of the application, here we are defining the three navigation routes, that should (together with **app.html**) result with this menu bar:
+
+![](http://i.imgur.com/AjCDDZb.png)
+ 
+```javascript
+export class App {
+  configureRouter(config, router){
+    config.title = 'Aurelia';
+    config.map([
+      { route: ['','welcome'],  name: 'welcome',      moduleId: 'welcome',      nav: true, title:'Welcome' },
+      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title:'Github Users' },
+      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title:'Child Router' }
+    ]);
+
+    this.router = router;
+  }
+}
+
+```
+**main.js** - stays as is no changes needed
+
+**index.html**
+
+Almost no changes here - we just added two lines that define the references to .css files we need:
+- **font-awesome.min.css** which was added to the project in the **Step 2** above
+- **styles/styles.css** -  copied from the [original Navigation Skeleton Application](https://github.com/aurelia/skeleton-navigation)
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aurelia</title>
+    <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body aurelia-app="main">
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('aurelia-bootstrapper');
+    </script>
+  </body>
+</html>
+
+```
+
+The rest of the files:
+- blur-image.js
+- child-router.html
+- child-router.js
+- users.html
+- users.js
+- welcome.html
+- welcome.js
+
+are copied from the [original Navigation Skeleton Application](https://github.com/aurelia/skeleton-navigation) as well, without changes.
+
+FInally, run ``gulp serve`` command to see the familiar rendering of our app:
+
+![](http://i.imgur.com/PkqVFrL.png)
+
+This concludes the tutorial
+
+
 
 
 
