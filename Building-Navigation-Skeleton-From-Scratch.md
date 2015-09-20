@@ -27,14 +27,19 @@ We are building the application which  will at the end have this **final** struc
 #### Let's start with the **smallest** meaningful subset of the application skeleton by following next 5 steps
 
 ### Step 1 
+
 **Create the ``src`` folder and add the 4 minimally required files**
+
 - ``app.html``  Application View
+
 ```html
 <template>
   ${message}
 </template>
 ```
+
 - ``app.js``  Application View-Model
+
 ```javascript
 export class App {
 
@@ -47,7 +52,9 @@ export class App {
   }  
 }
 ```
+
 - ``main.js`` Application "entry-point"
+ 
 ```javascript
 export function configure(aurelia) {
   aurelia.use
@@ -59,6 +66,7 @@ export function configure(aurelia) {
 ```
 
 - ``index.html``  This file should **not** be in the ``src`` folder - it should be located at the "root" level - sibling of the ``src`` folder
+
 ```html
 <!doctype html>
 <html>
@@ -103,12 +111,14 @@ At this point our application skeleton is just this:
 
 ![](http://i.imgur.com/Xz91mHF.png)
 
-### Step 2 
+### Step 2
+ 
 **Add all runtime (system) components to our application**
 
 It is the package.json file that defineds all "external" runtime components needeed by our application to able to run (in the context of the browser - you can find more details in the [Build - Debug - Deploy Workflow](https://github.com/aurelia-guides/aurelia-guides.md-articles/blob/master/Build-Debug-Deploy-Workflow.md) article). In order to keep this tutorial reasonably short, we will use the package.json that defines all packages needed by this skeleton application in its final state; most of these packages are not needed at this time when our application just shows the string "hello world!" on the screen.
 
 Once the content of the package.json is defined, adding all runtime components is done by the two consecutive commands
+
 ```
 npm install
 jspm install
@@ -120,7 +130,8 @@ The second line ``jspm install`` invokes the [jspm package manager](http://jspm.
 
 ![](http://i.imgur.com/cjaYJOe.png)
 
-### Step 3 
+### Step 3
+ 
 **Compile (build) our application**
 
 Again, you can find more details of this step  in the [Build - Debug - Deploy Workflow](https://github.com/aurelia-guides/aurelia-guides.md-articles/blob/master/Build-Debug-Deploy-Workflow.md) article. Here we will just summarize the process that this step requires.
@@ -130,6 +141,7 @@ Again, you can find more details of this step  in the [Build - Debug - Deploy Wo
 ![](http://i.imgur.com/rH7siUt.png)
 
 The javascript files in the tasks folder are **[Gulp](http://gulpjs.com/)** scriptfiles - see **[this](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)** for details. Just to "show-off", here is the build.js script:
+
 ```javascript
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
@@ -183,10 +195,12 @@ gulp.task('build', function(callback) {
 });
 
 ```
+
 - **Add the ``dist`` folder which will contain the output of the build step**
 
 
 - **Add the ``gulpfile.js`` file  with the following content**
+- 
 ```javascript
 // all gulp tasks are located in the ./build/tasks directory
 // gulp configuration is in files in ./build directory
@@ -208,6 +222,7 @@ At this point we can issue ``gulp build`` command which will result with:
 [17:54:15] Finished 'build-system' after 237 ms
 [17:54:15] Finished 'build' after 272 ms
 ```
+
 as a consequence of this process of building, observe that the initially empty ``dist`` folder now contains the compiled versions of our source files. Indeed it is the term ``transpiled`` that shoud be used instead of compiled - see **[this](http://k33g.github.io/2015/05/02/ES6.html)** for more information.
 
 In particular that our original ES6 app.js code 
@@ -266,7 +281,8 @@ System.register([], function (_export) {
 
 This is a small but a nice example of why are we using ES6 JavaScript syntax for Aurelia.
 
-### Step 4 
+### Step 4
+ 
 **Running our application**
 
 At this point we have everything in place - as we need to execute the ``gulp serve`` command defined as
@@ -320,11 +336,12 @@ Running this (``gulp serve``) command results with
 [BS] Serving files from: .
 [18:14:21] Finished 'serve' after 5.08 s
 ```
+
 When setting the url to ``http://localhost:9000`` we get the expected view:
 
 ![](http://i.imgur.com/pHOZBus.png)
 
------
+----------
 
 ### Adding Navigation (menu bar)
 
@@ -337,6 +354,7 @@ While in the general case we will make the content of the ``src`` folder a neste
 Here are the updated versions of the the original  four files, needed to implement navigation.:
 
 **app.html**
+
 ```html
 <template>
   <require from="nav-bar.html"></require>
@@ -349,6 +367,7 @@ Here are the updated versions of the the original  four files, needed to impleme
   </div>
 </template>
 ```
+
 **app.js**
 
 Instead of the trivial initial version of the app.js, where we simply defined the "hello world " string to be printed as the only functionality of the application, here we are defining the three navigation routes, that should (together with **app.html**) result with this menu bar:
@@ -375,6 +394,7 @@ export class App {
 **index.html**
 
 Almost no changes here - we just added two lines that define the references to .css files we need:
+
 - **font-awesome.min.css** which was added to the project in the **Step 2** above
 - **styles/styles.css** -  copied from the [original Navigation Skeleton Application](https://github.com/aurelia/skeleton-navigation)
 
