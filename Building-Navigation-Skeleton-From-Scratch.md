@@ -413,7 +413,7 @@ are copied from the [original Navigation Skeleton Application](https://github.co
 
 FInally, run ``gulp serve`` command to see the familiar rendering of our app:
 
-![](http://i.imgur.com/PkqVFrL.png)
+![](http://i.imgur.com/yckCqj2.png)
 
 This concludes the tutorial
 
