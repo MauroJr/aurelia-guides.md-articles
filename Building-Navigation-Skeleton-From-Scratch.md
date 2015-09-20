@@ -198,9 +198,8 @@ gulp.task('build', function(callback) {
 
 - **Add the ``dist`` folder which will contain the output of the build step**
 
-
 - **Add the ``gulpfile.js`` file  with the following content**
-- 
+ 
 ```javascript
 // all gulp tasks are located in the ./build/tasks directory
 // gulp configuration is in files in ./build directory
