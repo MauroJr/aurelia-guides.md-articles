@@ -411,9 +411,9 @@ The rest of the files:
 
 are copied from the [original Navigation Skeleton Application](https://github.com/aurelia/skeleton-navigation) as well, without changes.
 
-FInally, run ``gulp serve`` command to see the familiar rendering of our app:
+Finally, run ``gulp serve`` command to see the familiar rendering of our app:
 
-![](http://i.imgur.com/yckCqj2.png)
+
 
 This concludes the tutorial
 
