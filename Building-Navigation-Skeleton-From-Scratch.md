@@ -12,17 +12,34 @@ So, Aurelia-Guides presents the process of building this application gradually f
 - [Chrome](https://www.google.com/intl/en/chrome/browser/desktop/index.html#brand=CHMB&utm_campaign=en&utm_source=en-ha-na-us-sk&utm_medium=ha) browser
 - [WebStorm](https://www.jetbrains.com/webstorm/) in all cases that require the server side debugging
 
-**Note** See [Aurelia Development Environment and Tools](http://blog.aurelia-guides.com/2015/08/22/aurelia-development-environment-and-tools/#comment-33) and [What you need to know before writing your first Aurelia application](http://blog.aurelia-guides.com/2015/08/17/what-you-need-to-know-before-writing-your-first-aurelia-application/) for a more information 
+**Note** See [Aurelia Development Environment and Tools](http://blog.aurelia-guides.com/2015/08/22/aurelia-development-environment-and-tools/#comment-33) and [What you need to know before writing your first Aurelia application](http://blog.aurelia-guides.com/2015/08/17/what-you-need-to-know-before-writing-your-first-aurelia-application/) for a more information. 
 
------
+
+----------
+
+
+## Building and Running Aurelia Skeleton Navigation application
+
+While a typical application structure seems complicated, when you understand the **application build workflow** everything becomes a lot simpler - which is why we are starting with a graphical rendering of this workflow:
+
+1. The build workflow is run by **[gulp](http://gulpjs.com/)** and it starts by **[transpiling](https://en.wikipedia.org/wiki/Source-to-source_compiler)** the application source code written in **[ECMAScript 6](http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts)**
+2. The transpiler generated code is written into the ``dist`` folder at which point gulp invokes the **[browserify tool](http://browserify.org/)** to render the application in the browser.
+
+![](http://i.imgur.com/qZEjGlL.png)
+
+----------
+
 
 ## Structure of the Aurelia Skeleton Navigation application
 
-We are building the application which  will at the end have this **final** structure (shown is the version 0.18.1 being current at the time of writing this tutoria)l
+We are building the application which  will at the end have this **final** structure (shown is the version 0.18.1 being current at the time of writing this tutoria)
 
 ![](http://i.imgur.com/Xn1J8jh.png)
 
------
+
+
+----------
+
 
 #### Let's start with the **smallest** meaningful subset of the application skeleton by following next 5 steps
 
@@ -432,7 +449,7 @@ are copied from the [original Navigation Skeleton Application](https://github.co
 
 Finally, run ``gulp serve`` command to see the familiar rendering of our app:
 
-
+![](http://i.imgur.com/iTD5vcu.png)
 
 This concludes the tutorial
 
