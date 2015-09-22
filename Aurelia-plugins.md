@@ -1,4 +1,4 @@
-## Introduction 
+# Introduction 
 
 This article is written in the form of a tutorial and the intent is to explain the benefits of Aurelia plugins [defined](http://aurelia.io/docs.html#plugins) as:
 
@@ -25,98 +25,109 @@ export function configure(aurelia) {
 
 
 ----------
+# What is a plugin really and how is it used? 
 
+While the above described concept of an Aurelia plugin is not difficult to grasp (after all you can say that it is just an "DLL" - a dynamically linked library), there are details in both **creating** and **consuming** a plugin that need special attention and require detailed explanations. So, using the "mechanical" depiction of the relationship between the Aurelia application and a plugin (which literally is a container, lets start with the plugin construction first - to answer the first half of the question that serves as a title of this section. 
 
-## Example 1 - [Skeleton plugin](https://github.com/aurelia/skeleton-plugin)
+![](http://i.imgur.com/6kSaQ7m.png)
 
-The [Skeleton plugin](https://github.com/aurelia/skeleton-plugin) sample should be really called **Skeleton plugin tool**. It is a tremendous resource, capable of  creating 4 different dialects (amd, commonjs, es6 and system)  for the generated the Aurelia plugin object. The "skeleton" word in its name simply means that it is using the most simple set of source files that this plugin will "embedd" (listed below). 
+## Creating a plugin
 
-**hello-world.html**
+Every plugin has to expose two endpoints (note that we called them "interface" and "export" just to get you to map several vocabularies together and be less confused by terminology). The Configuration endpoint allows plugin's adaptability to different (but still supported) use case scenarios.
 
-```html
-<template>
-  Hello, world!
-</template>
-
-```
-
-**hello-world.js**
-```javascript
-export class HelloWorld {}
-
-```
-
-
-**index.js**
-```javacript
-export function configure(config){
-  config.globalResources('./hello-world');
-}
-```
-
-**Note 1** - observe that the ``hello-world.js`` file is E6 JavaScript, so the created ES6 plugin [code](https://github.com/aurelia/skeleton-plugin/blob/master/dist/es6/hello-world.js) is the same as the source code shown above. The generated amd [code](https://github.com/aurelia/skeleton-plugin/blob/master/dist/amd/hello-world.js) however is quite different:
+In most general situation different developers **create** the plugin than developers that **use** the plugin as an external component to their application. This is not always the case, as application developer can create a plugin containing the code that is common for all applications this developer may have to develop. In either case the plugin creator has to have a very detailed knowledge of application developer's needs (so that the exported functionality fits the needs of as many developers as possible, while the opposite is not necessarily true; application developer only needs to understand the API that plugin exposes to the application that consumes that plugin. In other words, creating plugins is a lot more difficult than using them. This tutorial takes the position that the reader needs to understand both sides.
+ 
+Plugin's Export Services endpoint is defined as a JavaScript code with the default name ``index.js`` which looks like (this is actual code for Aurelia-Bootstraper, referenced in the next section below - **Using (consuming a plugin)** 
 
 ```javascript
-define(["exports"], function (exports) {
-  "use strict";
+/*eslint no-unused-vars:0*/
+import core from 'core-js';
+import {Aurelia, LogManager} from 'aurelia-framework';
 
-  Object.defineProperty(exports, "__esModule", {
-    value: true
+let logger = LogManager.getLogger('bootstrapper');
+let readyQueue = [];
+let isReady = false;
+
+function onReady(callback) {
+  return new Promise((resolve, reject) => {
+    if (!isReady) {
+      readyQueue.push(() => {
+        try {
+          resolve(callback());
+        } catch (e) {
+          reject(e);
+        }
+      });
+    } else {
+      resolve(callback());
+    }
   });
+}
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+export function bootstrap(configure: (aurelia:Aurelia) => void): Promise<void> {
+  return onReady(() => {
+    let loader = new window.AureliaLoader();
+    let aurelia = new Aurelia(loader);
 
-  var HelloWorld = function HelloWorld() {
-    _classCallCheck(this, HelloWorld);
-  };
+    return configure(aurelia);
+  });
+}
+...
 
-  exports.HelloWorld = HelloWorld;
-});
 ```
 
+## Using (consuming a plugin)
 
-**Note 2** The "guts" of the plugin tool are in the gulp [build task](https://github.com/aurelia/skeleton-plugin/blob/master/build/tasks/build.js)
+In order to use the plugin, application needs to ensure that the plugin is "fetched" from some repository (npm registry, github, jspm registry are examples of such repository) and "stored" in the application's file structure. Such fetch takes place as a consequence:
 
-**Note 3** In order to illustrate the use of this ``hello-world`` plugin let's use the SAA sample - [Smallest Aurelia Application – created from scratch](http://blog.aurelia-guides.com/2015/08/22/smallest-aurelia-application-created-from-scratch/), slightly modified to allow the needed Aurelia configuration code, where we will "include" this plugin.
+- Reference a plugin in application's ``package.json`` file like
 
-- change the file ``index.html`` to define the application's "entry point" to be ``main.js`` ( line ``<body aurelia-app="main">``)
-
-```javascript
-<!doctype html>
-<html>
-  <head>
-    <title>Aurelia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body aurelia-app="main">
-    <h3>Loading...</h3>
-
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
-    <script>
-      System.import('aurelia-bootstrapper');
-    </script>
-  </body>
-</html>
 ```
+    ...
+  },
+"jspm": {
+    "dependencies": {
+      "aurelia-animator-css": "github:aurelia/animator-css@^0.16.0",
+      "aurelia-binding": "github:aurelia/binding@^0.9.0",
+      "bootstrapper": "github:aurelia/bootstrapper@^0.17.0",
+	...
+},
+...
+```
+where we define that:
 
-- Add the ``main.js`` file as shown below
+-  the origin for ``aurelia-bootstraper`` plugin to be [https://github.com/aurelia/bootstrapper](https://github.com/aurelia/bootstrapper)
+- this plugin's "internal name to be "bootstrapper"
+
+This "internal name" is subsequently used in the context of application's initialization code (typically the ``main.js`` that is the recommended application's entry point (place where the execution starts once the application is loaded in the browser):
 
 ```javascript
 export function configure(aurelia) {
   aurelia.use
-    .standardConfiguration()
-    .developmentLogging()
-    .hello-world();                  // <----- our plugin
+    .defaultBindingLanguage()
+    .defaultResources()
+    .history()
+    .router()
+    .eventAggregator()
+    .boostrapper(),
+...
 
-  
-  aurelia.start().then(a => a.setRoot());
+  aurelia.start().then(a => a.setRoot('app', document.body));
 }
 ```
 
 ----------
 
+# End to end tutorial
+
+A really nice example of a plugin, which is also easy to understand and very well designed / implemented is the **[Aurelia-Application-Configuration](https://github.com/Vheissu/Aurelia-Configuration)** created by Dwayne Harrington from Brisbane, Australia. We will use this plugin to illustrate plugin creation and use with all gory details.
+
 ----------
+
+----------
+
+----------
+
 
 ### Working notes (@jdanyov)
 
