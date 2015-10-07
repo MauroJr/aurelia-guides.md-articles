@@ -120,7 +120,46 @@ export function configure(aurelia) {
 
 # End to end tutorial
 
-A really nice example of a plugin, which is also easy to understand and very well designed / implemented is the **[Aurelia-Application-Configuration](https://github.com/Vheissu/Aurelia-Configuration)** created by Dwayne Harrington from Brisbane, Australia. We will use this plugin to illustrate plugin creation and use with all gory details.
+A nice example of a plugin, which is also easy to understand and very well designed / implemented is the **[Aurelia-Application-Configuration](https://github.com/Vheissu/Aurelia-Configuration)** created by Dwayne Harrington from Brisbane, Australia. We will use this plugin to illustrate plugin creation and use with all gory details.
+
+## Aurelia Application Configuration Plugin Creation
+
+Let's call this plugin AAC plugin in the remainder of this text and start with the description of its purpose as defined by Dwayne Charrington, its author:
+
+>  **AAC is a smart configuration plugin and singleton service layer for your Aurelia applications** 
+
+Using a bit more formal language, AAC exposes (exports) a handful of methods that can be used at the time of your application's (application that uses AAC plugin) configuration phase. Let's list them here and you can see more details in the AAC plugin's **[README.md](https://github.com/Vheissu/Aurelia-Configuration#api)** file
+
+- ``setCascadeMode(boolean = true)``
+- ``setDirectory(name)``
+- ``setConfig(fileName)``
+- ``setEnvironment(environment)``
+- ``setEnvironments(environments)``
+- ``is(environment)``
+- ``get(key, defaultValue = null)``
+- ``set(key, val)``
+- ``setAll(obj)``
+- ``getAll()``
+
+At this point we can explain the main sections of any plugin structure:
+
+#### 1 Plugin Configuration Endpoint
+
+
+
+#### 2 Plugin Services Endpoint
+#### 3 Plugin Services Implementation
+
+See **[Aurelia-Configuration/src/configure.js](https://github.com/Vheissu/Aurelia-Configuration/blob/master/src/configure.js)**
+
+
+
+----------
+
+
+## Aurelia Application Configuration Plugin Use
+
+We will use the **[Aurelia Skeleton Navigation](https://github.com/aurelia/skeleton-navigation/releases/tag/0.18.1)** app (note that this link references the most current release 0.18.1). See also [Building Skeleton Navigation From Scratch](https://github.com/aurelia-guides/aurelia-guides.md-articles/blob/master/Building-Skeleton-Navigation-From-Scratch.md) for all details that will be used in this section.
 
 ----------
 
